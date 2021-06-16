@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import controller.main.EmployeeJoinPage;
+import sun.rmi.server.Dispatcher;
 
 public class EmployeeController extends HttpServlet
 	implements Servlet{
@@ -54,6 +55,13 @@ public class EmployeeController extends HttpServlet
 			EmployeeDeletePage action = new EmployeeDeletePage();
 			action.empDelete(request);
 			response.sendRedirect("empList.em");
+		}else if(command.equals("/empPage.em")) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("employee/empPage.jsp");
+			dispatcher.forward(request, response);
+		}else if(command.equals("/empDetail.em")) {
+			
+			RequestDispatcher dispatcher = request.getRequestDispatcher("employee/empDetil.jsp");
+			dispatcher.forward(request, response);
 		}
 		
 	}

@@ -7,10 +7,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>직원 리스트 페이지입니다.</title>
 </head>
 <body>
-직원 리스트 페이지입니다.<br />
 <c:if test="${!empty empList}">
 <table>
 	<tr><td>사원번호</td><td>이름</td><td>직무</td><td>입사일</td><td>사무실번호</td></tr>

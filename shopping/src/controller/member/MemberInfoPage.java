@@ -9,7 +9,7 @@ public class MemberInfoPage {
 	public void mamInfo(HttpServletRequest request) {
 		String memId = request.getParameter("memId");
 		MemberDAO dao = new MemberDAO();
-		MemberDTO dto = dao.mamInfo(memId);
+		MemberDTO dto = dao.memInfo(memId);
 		request.setAttribute("dto", dto);
 	}
 }

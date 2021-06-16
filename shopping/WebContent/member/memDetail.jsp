@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원정보 페이지</title>
+<title>회원정보</title>
 </head>
 <body>
 	회원정보 페이지입니다.<br>
@@ -20,11 +20,11 @@
 	이메일 : ${dto.memEmail}<br>
 	계좌번호 : ${dto.memAccount}<br>
 	수신여부 :<c:if test="${dto.memEmailCk == 'Y' }">
-		이메일 수신함
+		이메일 수신함.
 	</c:if>
 	<c:if test="${dto.memEmailCk == 'N' }">
 		이메일 수신 안함.
 	</c:if><br>
-	<a href="memMod.mem?memId=${dto.memId}">수정</a>
+	<a href="memSujung.mem">수정</a>
 </body>
 </html>

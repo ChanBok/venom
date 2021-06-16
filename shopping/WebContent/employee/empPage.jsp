@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>myPage employee</title>
 </head>
 <body>
-<a href="memDetail.mem">회원정보</a> | <a href="memPwChange.mem">비밀번호 변경</a> | <a href="memOut.mem">회원탈퇴</a>
+<a href="empDetail.em">내정보</a> | <a href="empPwChange.em">비밀번호 변경</a> | <a href="empOut.em">사원탈퇴</a>
 </body>
 </html>

@@ -101,7 +101,7 @@ public class MemberDAO {
 		if(conn != null) try {conn.close();}
 		catch (SQLException e) {}
 	}
-	public MemberDTO mamInfo(String memId) {
+	public MemberDTO memInfo(String memId) {
 		MemberDTO dto = new MemberDTO();
 		sql = "select " + COLUMNS + " from member where mem_id = ?";
 		getConnect();
@@ -164,6 +164,19 @@ public class MemberDAO {
 			e.printStackTrace();
 		}finally {
 			close();
+		}
+	}
+	public void pwChange(String memId, String memPw) {
+		sql = " update member set mem_pw = ? where mem_id = ?";
+		getConnect();
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, memPw);
+			pstmt.setString(2, memId);
+			int i = pstmt.executeUpdate();
+			System.out.println(i + "개의 행이 수정되었습니다.");
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 	}
 }
